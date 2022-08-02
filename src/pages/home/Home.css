@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@300&display=swap');
+
 
 .home-main {
     display: flex;
@@ -15,20 +14,12 @@
 }
 
 .MuiButton-outlined {
-    border: 2px solid #C4E538 !important;
+    border: 2px solid color="inherit" !important;
     padding: 5px 50px !important;
 }
 
-.button a {
-    color: #C4E538 !important;
+.button {
     font-weight: bold;
-    font-family: 'Oswald', sans-serif !important;
-}
-
-.title {
-    color: #000000;
-    font-family: 'Dancing Script', cursive !important;  
-    size: 50px !important;
 }
 
 .message {

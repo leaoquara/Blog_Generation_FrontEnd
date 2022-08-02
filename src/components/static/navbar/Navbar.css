@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@300&display=swap');
-
 .nav-main {
-    background-color: #C4E538;
-    color: #ffffff;
     display: flex;
     gap: 5px;
     height: 8vh;
@@ -15,11 +10,4 @@
     gap: 6%;
     justify-content: flex-end;
     width: 78%;
-}
-
-.title-nav {
-    font-family: 'Dancing Script', cursive !important;
-}
-.text-nav{
-    font-family: 'Oswald', sans-serif !important;
 }
