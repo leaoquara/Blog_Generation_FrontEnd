@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Grid, Typography } from '@material-ui/core';
 import { Box } from "@mui/material";
+import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import './Home.css';
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
               <img src="https://i.imgur.com/6ALCPyj.png" alt="" width="500px" height="500px" />
           </Grid>
           <Grid xs={12} className='posts'>
+            <TabPostagem/>
           </Grid>
       </Grid>
   </>
