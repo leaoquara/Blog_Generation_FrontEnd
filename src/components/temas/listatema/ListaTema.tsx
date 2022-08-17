@@ -1,42 +1,40 @@
-import React, {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
-import Tema from '../../../models/Tema';
-import './ListaTema.css';
-import {useNavigate} from 'react-router-dom';
-import { busca } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {Box,Card,CardActions,CardContent,Button,Typography,} from "@mui/material";
+import "./ListaTema.css";
+import Tema from "../../../models/Tema";
+import { busca } from "../../../services/Service";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/TokensReducer";
+import { toast } from "react-toastify";
 
 function ListaTema() {
-  const [temas, setTemas] = useState<Tema[]>([])
-  let navigate = useNavigate();
+  const [temas, setTemas] = useState<Tema[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+  let navigate = useNavigate();
 
-  useEffect(()=>{
-    if(token == ''){
+  useEffect(() => {
+    if (token == "") {
       alert("Você precisa estar logado")
-      navigate("/login")
+      navigate("/login");
     }
-  }, [token])
+  }, [token]);
 
-
-  async function getTema(){
+  async function getTema() {
     await busca("/tema", setTemas, {
       headers: {
-        'Authorization': token
-      }
-    })
+        Authorization: token,
+      },
+    });
   }
 
-
-  useEffect(()=>{
-    getTema()
-  }, [temas.length])
-
-  return (
+  useEffect(() => {
+    getTema();
+  }, [temas.length]);
+  
+   return (
     <>
     {
       temas.map(tema =>(
@@ -76,6 +74,5 @@ function ListaTema() {
     </>
   );
 }
-
 
 export default ListaTema;
