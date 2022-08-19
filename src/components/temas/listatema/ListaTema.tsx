@@ -6,7 +6,7 @@ import Tema from '../../../models/Tema';
 import './ListaTema.css';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaTema() {
 

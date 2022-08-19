@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { useDispatch, useSelector } from 'react-redux';
-import {TokenState} from '../../../store/tokens/TokensReducer'
+import {TokenState} from '../../../store/tokens/tokensReducer'
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
 
